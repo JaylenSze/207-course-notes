@@ -25,7 +25,17 @@ public class FirstLetters {
      * @return the first character of each word, concatenated
      */
     public static String firstLetters(String words) {
-        // TODO: complete
-        return "";
+        String s = "";
+        boolean b = true;
+        for(int i = 0; i < words.length(); i++){
+            if(b){
+                s = s + words.charAt(i);
+                b = false;
+            }
+            if(words.charAt(i) == ' '){
+                b = true;
+            }
+        }
+        return s;
     }
 }
